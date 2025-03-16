@@ -1,5 +1,29 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
+class Empleado {
+    private String nombre;
+    private int id;
+
+    public Empleado(String nombre, int id) {
+        this.nombre = nombre;
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Empleado: "+nombre+", ID: "+id;
+    }
+}
+
 public class GestionEmpleados {
     private static int contadorEmpleados = 0; // Memoria estática para el contador
     private static ArrayList<Empleado> listaEmpleados = new ArrayList<>(); // Memoria dinámica para la lista
